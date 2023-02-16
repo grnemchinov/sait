@@ -1328,9 +1328,3 @@ section .color:nth-child(3){
 	margin-top: 2em;
 	 margin-left: 4em;
 }
-#image{
-	background-image:url(./img/head.jpg)
-}
-#image1{
-	background-image:url(./img/head2-1.jpg)
-}
