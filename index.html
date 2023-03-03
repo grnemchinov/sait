@@ -19,8 +19,7 @@
 	<body>
 
 		<header id="header" class="transparent-nav">
-			<div class="container">
-
+			<div class="container" id="con">
 				<div class="navbar-header">
 					<div class="navbar-brand">
 						<a class="logo" href="index.html">
@@ -33,16 +32,59 @@
 				</div>
 
 				<nav id="nav">
-					<ul class="main-menu nav navbar-nav navbar-right">
-						<li><a href="index.html">Сведения</a></li>
-						<li><a href="#">Абитуриенту</a></li>
-						<li><a href="#">Студенту</a></li>
-						<li><a href="blog.html">Образования</a></li>
-						<li><a href="contact.html">Контакты</a></li>
-						<li><a href="contact.html">Электронная информационно-образовательная среда</a></li>
+					<ul class="main-menu nav navbar-nav topmenu">
+						<li><a href="index.html" class="down">Сведения</a>
+							<ul class="submenu">
+					            <li><a href="#">Основные сведения</a></li>
+					            <li><a href="#">Структура и органы управления образовательной организацией</a></li>
+					            <li><a href="#">Документы</a></li>
+					            <li><a href="#">Образование</a></li>
+					            <li><a href="#">Образовательные стандарты</a></li>
+					            <li><a href="#">Руководство. Педагогический (научно-педагогический) состав</a></li>
+					            <li><a href="#">Материально-техническое обеспечение и оснащенность образовательного процесса</a></li>
+					            <li><a href="#">Стипендии и иные виды материальной поддержки</a></li>
+					            <li><a href="#">Платные образовательные услуги</a></li>
+					            <li><a href="#">Финансово-хозяйственная деятельность</a></li>
+				          	</ul>
+				        </li>
+						<li><a href="#" class="down">Абитуриенту</a>
+						<ul class="submenu">
+					            <li><a href="#">Информация о техникуме</a></li>
+					            <li><a href="#">Приёмная комиссия</a></li>
+					            <li><a href="#">О специальностях</a></li>
+					            <li><a href="#">Информация для студентов и их законных представителей</a></li>
+					            <li><a href="#">Дни открытых дверей</a></li>
+					            <li><a href="#">Подготовительные курсы</a></li>
+					            <li><a href="#">Формы обучения и сроки реализации образовательных программ</a></li>
+				          	</ul>
+				          </li>
+						<li><a href="#" class="down" >Студенту</a>
+							<ul class="submenu">
+					            <li><a href="#">Расписание занятий</a></li>
+					            <li><a href="#">Изменения в расписании</a></li>
+					            <li><a href="#">Расписание экзаменов</a></li>
+					            <li><a href="#">Практики</a></li>
+					            <li><a href="#">Сайты отделений</a></li>
+					            <li><a href="#">Библиотека</a></li>
+					            <li><a href="#">Студенческая жизнь</a></li>
+					            <li><a href="#">Дополнительное образование</a></li>
+					            <li><a href="#">Психологическое консультирование</a></li>
+					            <li><a href="#">Спортивная жизнь</a></li>
+					            <li><a href="#">Студенческий портал</a></li>
+					            <li><a href="#">Фотоархив</a></li>
+					            <li><a href="#">Чемпионат Worldskills</a></li>
+					            <li><a href="#">Вопросы-ответы</a></li>
+					            <li><a href="#">Трудоустройство</a></li>
+					            <li><a href="#">Студенческий совет</a></li>
+					            <li><a href="#">Всё о частичной мобилизации</a></li>
+				          	</ul>
+						</li>
+						<li><a href="blog.html" class="down">Образования</a></li>
+						<li><a href="contact.html" class="down">Контакты</a></li>
+						<li><a href="contact.html" class="down">Электронная информационно-образовательная среда</a></li>
 					</ul>
 				</nav>
-
+				<div id="authUser" class="lead white-text">IS AUTORIZED</div>
 			</div>
 		</header>
 		<div id="home" class="hero-area">
@@ -59,10 +101,98 @@
 							<p class="lead white-text">Нахимовский проспект, 21 </p>
 							<p class="lead white-text">Приемная комиссия: 8 (499) 317-04-09</p>
 							<a class="main-button icon-button" href="#">Перейти</a>
+
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="autorise">
+				<div class="main" id="divAuthForms">  	
+					<input type="checkbox" id="chk" aria-hidden="true">
+					<div class="signup">
+						<form action="#" method="#" id="formReg">
+							<label for="chk" aria-hidden="true">Регистрация</label>
+							<input type="text" id="formRegLogin" name="login" placeholder="Login" required="" class="in-put">
+							<input type="password" id="formRegPassword" name="password" placeholder="Password" required="" class="in-put">
+							<button type="submit" class="main-button icon-button" id="but">Регистрация</button>
+						</form>
+					</div>
+
+					<div class="login">
+						 <form action="#" method="#" id="formLogin">
+						    <label for="chk" aria-hidden="true">Войти</label>
+						    <input type="text" id="formLoginLogin" name="login" placeholder="Login" required="" class="in-put1">
+						    <input type="password" id="formLoginPassword" name="password" placeholder="Password" required="" class="in-put1">
+						    <button type="submit" class="main-button icon-button" id="but1">Войти</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<script>
+
+			 const formLogin = document.getElementById('formLogin');
+			 const formReg = document.getElementById('formReg');
+			 formLogin.addEventListener('submit', sendLogin);
+			 formReg.addEventListener('submit', sendReg);
+			 const divAuthUser = document.getElementById('authUser');
+			 const divAuthForms = document.getElementById('divAuthForms');
+			 divAuthForms.style.display = 'block';
+			 divAuthUser.style.display = 'none';
+
+			 function sendLogin(event) {
+			    event.preventDefault();
+			    const login = formLogin.querySelector('[name="login"]'),
+			    password = formLogin.querySelector('[name="password"]'),
+			    data = JSON.stringify({
+			      login: login.value,
+			      password: password.value
+			    });
+			    var xhr = new XMLHttpRequest();
+			    xhr.open("POST", "http://127.0.0.1:5000/login");
+			    xhr.setRequestHeader('Content-Type', 'application/json');
+			    xhr.send(data)
+
+			    xhr.onload = function() {
+			      if (xhr.status == 200) {
+					alert("Вы вошли!")
+			        divAuthForms.style.display = 'none';
+			        divAuthUser.style.display = 'block';
+			        divAuthUser.innerHTML = login.value;
+			      } else {
+			      	alert("Не верные логин или пароль!")
+			        divAuthForms.style.display = 'block';
+			        divAuthUser.style.display = 'none';
+			        divAuthUser.innerHTML = login.value;
+			      }
+			    };
+			}
+			 function sendReg(event) {
+			    event.preventDefault();
+			    const login = formReg.querySelector('[name="login"]'),
+			    password = formReg.querySelector('[name="password"]'),
+			    data = JSON.stringify({
+			      login: login.value,
+			      password: password.value
+			    });
+			    var xhr = new XMLHttpRequest();
+			    xhr.open("POST", "http://127.0.0.1:5000/registration");
+			    xhr.setRequestHeader('Content-Type', 'application/json');
+			    xhr.send(data)
+
+			    xhr.onload = function() {
+			      if (xhr.status == 200) {
+					alert("Вы Зарегестрированы!")
+					divAuthForms.style.display = 'none';
+			        divAuthUser.style.display = 'block';
+			        divAuthUser.innerHTML = login.value;
+			      } else {
+			      	alert("Регистрация не удалась! Попробуй снова.")
+			        divAuthUser.style.display = 'none';
+			        divAuthUser.innerHTML = login.value;
+			      }
+			    };
+			}
+			</script>
 
 		</div>
 		<div id="about" class="section">
@@ -342,11 +472,10 @@
 						</div>
 					</div>
 					<div class="mybot2">
-						<a class="main-button icon-button" href="#">Сведения</a>
-						<a class="main-button icon-button" href="#">Абитуриенту</a>
-						<a class="main-button icon-button" href="#">Студенту</a>
-						<a class="main-button icon-button" href="#">Образование</a>
-						<a class="main-button icon-button" href="#">Контакты!</a>
+						<a class="main-button icon-button" href="#">Приемная комиссия</a>
+						<a class="main-button icon-button" href="#">Первокурснику</a>
+						<a class="main-button icon-button" href="#">Версия для слабовидящих</a>
+						<a class="main-button icon-button" href="#">Обращение к директору</a>
 					</div>
 
 				</div>

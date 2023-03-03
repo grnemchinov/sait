@@ -64,7 +64,7 @@ blockquote {
 blockquote:before{
 	content:"\f10d";
 	font-family:fontAwesome;
-	position:absolute;
+	position:flex;
 	left:0;
 	top:0;
 	color: #FF6700;
@@ -179,6 +179,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .navbar-brand {
     padding: 0;
+    left: 5%;
 }
 
 .navbar-brand .logo {
@@ -213,7 +214,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	background-color: transparent;
 }
 
-#header.transparent-nav .main-menu li a {
+#header.transparent-nav .main-menu {
 	color:#FFF;
 }
 
@@ -1326,5 +1327,146 @@ section .color:nth-child(3){
 #kartinka1{
 	height: 400px; 
 	margin-top: 2em;
-	 margin-left: 4em;
+	margin-left: 4em;
 }
+.autorise{
+	position: relative;
+	height: 150px;
+	left: 70%;
+	top: 20%;
+}
+.main{
+	width: 350px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: white;
+}
+#but{
+	display: block;
+	margin: 10px auto;
+	margin-top: 20px;
+	cursor: pointer;
+	justify-content: center;
+}
+#but1{
+	display: block;
+	margin: 10px auto;
+	margin-top: 20px;
+	cursor: pointer;
+	justify-content: center;
+}
+.login{
+	height: 400px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #FF6700;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-400px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+.in-put::placeholder {
+	color: white;
+}
+.in-put1{
+	color: #374050;
+}
+#authUser{
+	right: 1%;
+	position: absolute;
+}
+#con{
+	width: 90%;
+}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+}
+.topmenu > li > a:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 100%;
+  width: 20px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  transition: .3s;
+  color: #374050;
+}
+.submenu {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 100%;
+  width: 250px;
+  padding: 15px 0 15px;
+  margin-top: 5px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,.2);
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  transition: .3s;
+}
+.topmenu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.submenu a {
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+}
+.submenu a:hover {background: #e8e8e8;}
+.down{  color: white;}
